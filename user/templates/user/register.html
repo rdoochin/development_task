@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style type="text/css">
+		h1{color:green;}
+	</style>
 	<title>User Registration</title>
 </head>
 <body>
@@ -13,18 +16,22 @@
 			{% csrf_token %}	
 			<!-- The fieldset is used to group related elements in a form. -->
 			<fieldset class = "form-group">		
-				<legend class = "border-bottom mb-4">Please create an account below:</legend>
+				<legend class = "border-bottom mb-4">Please create an account below</legend>
 				<!-- Prints all of the information in the form as a paragraph. -->
 				{{ form.as_p }}		
 			</fieldset>
+			<p>
 			<div class="form-group">
 				<button class="btn btn-outline-info" type="submit">Complete Registration</button>
 			</div>
+			</p>
 		</form>
 		<div class="border-top pt-3">
+			<p>
 			<small class="text-muted">
 				Already have an account? <a class="ml-2" href="{% url 'login' %}">Login Here.</a>
 			</small>
+			</p>
 		</div>
 	</div>
 	<!-- end tutorial code -->
