@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Registration</title>
+</head>
+<body>
+	<h1>User Registration</h1>
+	<!-- this is from the tutorial -->
+	<div class = "content-section">
+		<!-- The form is now a POST rather than GET method. -->
+		<form method = "POST">
+			<!-- Adds security and allows us to access the form variable. -->
+			{% csrf_token %}	
+			<!-- The fieldset is used to group related elements in a form. -->
+			<fieldset class = "form-group">		
+				<legend class = "border-bottom mb-4">Please create an account below:</legend>
+				<!-- Prints all of the information in the form as a paragraph. -->
+				{{ form.as_p }}		
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-outline-info" type="submit">Complete Registration</button>
+			</div>
+		</form>
+		<div class="border-top pt-3">
+			<small class="text-muted">
+				Already have an account? <a class="ml-2" href="{% url 'login' %}">Login Here.</a>
+			</small>
+		</div>
+	</div>
+	<!-- end tutorial code -->
+
+</body>
+</html>
